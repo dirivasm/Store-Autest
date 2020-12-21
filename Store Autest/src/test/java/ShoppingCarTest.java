@@ -30,6 +30,10 @@ public final class ShoppingCarTest {
     @BeforeMethod
     public void setUp() throws InterruptedException {
         TestSetup.Setup();
+         /*
+            This should be handled within Setup() method since is not related either to Data Generation nor Test implementation.
+            Removing this will avoid DRY Anti Pattern to be introduced
+         */
         driver = new WebDriver() {
             public void get(String s) {
 
