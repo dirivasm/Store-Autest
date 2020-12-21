@@ -11,6 +11,9 @@ public final class ElementUtils {
     private ElementUtils() {
     }
 
+      /*
+      Wrapper method looks good, however when implementing this, there is no need for final keyword to be used.
+     */
     public static boolean isDisplayed(final WebElement element) {
         try {
             return element.isDisplayed();
