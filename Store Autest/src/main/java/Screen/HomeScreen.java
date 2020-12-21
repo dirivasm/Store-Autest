@@ -8,6 +8,10 @@ import org.openqa.selenium.WebElement;
 
 public final class HomeScreen {
 
+       /*
+          Using WebDriver as static variable could affect parallel execution. It is a good implementation if you are not planning to parallely execute your tests
+          however, In practice, you should always aim to reduce execution time by handling your architecture and build your tests so they can be executed parallely
+     */
     private static WebDriver driver;
 
     private final WebElement yourLogo = driver.findElement(By.xpath("//*[@id=\"header_logo\"]/a/img"));
